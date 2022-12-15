@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ru"><head>
+    <title>Login page</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="login.css" media="screen">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+  </head>
+  <body class="u-body u-xl-mode" data-lang="ru"><header class="u-clearfix u-header u-header" id="sec-a40b"><div class="u-clearfix u-sheet u-sheet-1"></div></header>
+    <section class="u-clearfix u-section-1" id="sec-175d">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-align-center u-form u-form-1">
+          <form name=form class="u-clearfix u-form-horizontal u-form-spacing-15 u-inner-form" style="padding: 15px">
+            <div class="u-form-group u-form-name u-label-top">
+              <label for="name-558c" class="u-label">Username</label>
+              <input type="text" placeholder="Username" id="name-558c" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
+            </div>
+            <div class="u-form-group u-form-submit u-label-top">
+              <button class="u-btn u-btn-submit u-button-style" type="submit">Вход</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-footer" id="sec-aef3"><div class="u-clearfix u-sheet u-sheet-1"></div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">  
+    </section>
+    <!-- <script src="script.js"></script> -->
+    <script type="text/javascript" src="/eel.js"></script>
+    <script>
+      let input = document.querySelector('input');
+      let form = document.querySelector('.u-form-spacing-15');
+      form.onsubmit = function(evt) {
+          evt.preventDefault();
+          eel.username(input.value);
+          window.location = "http://localhost:8000/index.html";
+        //   eel.recording(); // Call a Python function
+        // setTimeout(() => eel.recording(), 10000);
+      };
+    </script>
+  
+</body></html>
