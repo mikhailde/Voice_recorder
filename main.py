@@ -31,4 +31,8 @@ def username(name):
     user_name = name
     print(name)
 
-eel.start('login.html')
+@eel.expose
+def printing():
+    print(123)
+
+eel.start('login/login.html')
