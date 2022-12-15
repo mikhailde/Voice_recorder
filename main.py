@@ -1,6 +1,8 @@
 import eel
 import web.backend.record as record
 import threading
+import os
+user_name = ''
 
 
 eel.init('web/frontend', allowed_extensions=['.js', '.html'])
@@ -23,5 +25,10 @@ def recording():
     thread.daemon = True
     thread.start()
 
+@eel.expose
+def username(name):
+    global user_name
+    user_name = name
+    print(name)
 
-eel.start('hello.html')
+eel.start('login.html')
