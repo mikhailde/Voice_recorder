@@ -40,6 +40,11 @@ def pythonFunction(wildcard="*"):
     if dialog.ShowModal() == wx.ID_OK: path = dialog.GetPath()
     else: path = None
     dialog.Destroy()
-    os.system(f'cp {path} web/backend/files')
+    try:
+        if path[path.find('.'):] == '.csv':
+            os.system(f'cp {path} web/backend/files')
+            return 'true'
+    except: pass
+    return 'false'
 
 eel.start('login/login.html')
