@@ -10,7 +10,7 @@ class Recorder():
         self.channels = 2
         self.fs = 44100  # Record at 44100 samples per second
         self.seconds = 3
-        self.filename = "output.wav"
+        self.filename = "files/output.wav"
         self.control = "web/backend/control"
 
     def record(self):
