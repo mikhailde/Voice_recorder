@@ -1,2 +1,3 @@
 eel
 pyaudio
+wxpython
